@@ -16,10 +16,10 @@ command-line options
 road_networks of the directory networks.
 
 4. Command-line options examples for executing the file main.py
-    ``` python main.py generate intersection -m 2 -tl 0 1 ```
+    ``` python main.py intersection -m 2 -tl 0 1 ```
 *Explanation: Generates 2 intersections with traffic lights at the junction*
 with ID 0 and at the junction with ID 1
-    ``` python main.py generate freeway -b -len 1000 ```
+    ``` python main.py freeway -b -len 1000 ```
 *Explanation: Generates a bidirectional freeway with a road length
 of 1000 meters*
 
