@@ -9,17 +9,17 @@
 
 1. Please make sure, that the *SUMO_HOME* variable is set.
 
-2. Execute the file main.py in the directory networks with below listed
+2. Execute the file sss4s.py in the directory networks with below listed
 command-line options
 
 3. The *net.xml*-, *add.xml*- and the *rou.xml*-files can be found in the subdirectory
 road_networks of the directory networks.
 
-4. Command-line options examples for executing the file main.py
-    ``` python main.py intersection -m 2 -tl 0 1 ```
+4. Command-line options examples for executing the file sss4s.py
+    ``` python sss4s.py intersection -m 2 -tl 0 1 ```
 *Explanation: Generates 2 intersections with traffic lights at the junction*
 with ID 0 and at the junction with ID 1
-    ``` python main.py freeway -b -len 1000 ```
+    ``` python sss4s.py freeway -b -len 1000 ```
 *Explanation: Generates a bidirectional freeway with a road length
 of 1000 meters*
 
