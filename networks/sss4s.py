@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3
+#!/usr/bin/python3
 #
 # Copyright (C) 2021 Dalisha Logan <https://www.cms-labs.org/people/dalisha.logan/>
 # Copyright (C) 2021 Tobias Hardes <https://www.cms-labs.org/people/hardes/>
