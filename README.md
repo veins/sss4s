@@ -4,6 +4,8 @@
 
  Thus, it is important to install the right version of SUMO in order that the tool *sss4s* works.
 
+## Installation
+**sss4s** requires Python 3.8 or greater
 
 ## How to use the tool sss4s
 
