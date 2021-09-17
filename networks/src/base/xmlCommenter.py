@@ -92,7 +92,7 @@ def writeDocumentation(param, args):
         xmlstr = minidom.parseString(ET.tostring(sss4sE)).toprettyxml(indent="      ")
         f.write("\n<!--generated on " + str(
             date.today()) + " by 'SIMPLE SYNTHETIC SCENARIOS 4 SUMO (sss4s)', cleaned "
-                            "with " + netconvertOutput.split("\n")[0] + " \n" + xmlstr + "-->\n" + data[
+                            "with " + netconvertOutput.split("\n")[0] + " \n" + xmlstr +  data[
                                                                                                 0:end] + "\n" + data[
                                                                                                                 end:len(
                                                                                                                     data)])
