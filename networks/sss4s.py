@@ -122,8 +122,7 @@ def main():
     if sys.argv[1] == "grid_chicago":
         print("Generating Chicago grid ...")
         grid_test = gridtest.TestGrid(args.grid_x_length, args.grid_y_length, args.grid_x_direction,
-                                      args.grid_y_direction, args.lanes, args.traffic_light_all, args.traffic_light,
-                                      args.traffic_light_notall, args.speed, args.polygon)
+                                      args.grid_y_direction, args.lanes, args.speed)
         grid_test.test_grid()
         grid_network.create_grid("grid", args.grid_x_length, args.grid_y_length, args.grid_x_direction,
                                  args.grid_y_direction, args.lanes, args.traffic_light_all, args.traffic_light,

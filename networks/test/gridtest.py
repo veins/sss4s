@@ -1,19 +1,15 @@
 import sys
-import re 
-from collections import Iterable, Mapping
+
 from src.input import check_numbers_valid
 
 
-
-
 class TestGrid():
-    def __init__(self, name, grid_x_length, grid_y_length, grid_x_dir, grid_y_dir, lanes,speed, building):
+    def __init__(self, grid_x_length, grid_y_length, grid_x_dir, grid_y_dir, lanes, speed):
         self.test_grid_x_length = grid_x_length
         self.test_grid_y_length = grid_y_length
         self.test_grid_x_dir = grid_x_dir
         self.test_grid_y_dir = grid_y_dir
         self.test_lanes = lanes
-        self.test_building = building
         self.test_speed = speed
         
 
@@ -23,7 +19,7 @@ class TestGrid():
         self.test_grid_y_dir = check_numbers_valid(self.test_grid_y_dir)
         
 
-        if (self.test_grid_x_dir) < 2 or (self.test_grid_y_dir) < 2:
+        if self.test_grid_x_dir < 2 or self.test_grid_y_dir < 2:
             sys.exit("Please enter a number above two for the number of nodes in vertical and horizontal direction!")
 
         if self.test_grid_x_dir > 20 or self.test_grid_y_dir >20:
