@@ -1,4 +1,4 @@
-## What is the tool sss4s 
+## Simple Synthetic Scenarios for Sumo (sss4s)
 
  **sss4s** is a command-line tool, which is able to generate road networks with command-line options. This tool uses certain tools from the road-traffic simulator SUMO and works currently with version 1.8.0 of SUMO.
 
@@ -18,10 +18,10 @@ command-line options
 road_networks of the directory networks.
 
 4. Command-line options examples for executing the file sss4s.py
-    ``` python sss4s.py intersection -m 2 -tl 0 1 ```
+    ``` ./sss4s.py intersection -m 2 -tl 0 1 ```
 *Explanation: Generates 2 intersections with traffic lights at the junction*
 with ID 0 and at the junction with ID 1
-    ``` python sss4s.py freeway -b -len 1000 ```
+    ``` ./sss4s.py freeway -b -len 1000 ```
 *Explanation: Generates a bidirectional freeway with a road length
 of 1000 meters*
 
