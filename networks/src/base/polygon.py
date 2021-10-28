@@ -19,8 +19,8 @@
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #
 
-from xml.etree.ElementTree import ElementTree
-from xml.etree.ElementTree import Element
+from xml.etree.ElementTree import Element, tostring
+from xml.dom import minidom
 
 import os
 
@@ -39,11 +39,11 @@ class Polygon:
     def dict_poly(self):
 
         self.poly['id'] = self.poly_id
+        self.poly['type'] = 'building'
         self.poly['color'] = 'red'
         self.poly['fill'] = '1'
         self.poly['layer'] = '128.00'
         self.poly['shape'] = self.poly_shape
-
     # Setting Street-Margin
 
     # Generate everywhere polygons
@@ -73,9 +73,9 @@ class Polygon:
 
         path = os.getcwd()
 
-        tree = ElementTree(self.root)
-        tree.write(open(r'{}/road_networks/{}.add.xml'.format(path, self.netw_obj.name), 'wb'), encoding="utf-8",
-                   xml_declaration=True)
+        xmlstr = minidom.parseString(tostring(self.root)).toprettyxml(indent="\n")
+        with open(r'{}/road_networks/{}.add.xml'.format(path, self.netw_obj.name), 'wb') as f:
+            f.write(xmlstr.encode('utf-8'))
 
     # Generate the xml-file
     def generate_xml(self):
